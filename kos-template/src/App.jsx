@@ -2,9 +2,9 @@ import { useState, useRef, useEffect } from "react";
 import "./app.css";
 import kosLogo from "./assets/koslogo.png";
 import KosLogo from "./KosLogo";
-import ClassicTemplate from "./templates/ClassicTemplate";
-import SplitTemplate from "./templates/SplitTemplate";
-import DarkTemplate from "./templates/DarkTemplate";
+import ClassicTemplate from "./templates/ClassicTemplate.jsx";
+import SplitTemplate from "./templates/SplitTemplate.jsx";
+import DarkTemplate from "./templates/DarkTemplate.jsx";
 
 // Postavi favicon i tab title na logo aplikacije
 const useFavicon = () => {

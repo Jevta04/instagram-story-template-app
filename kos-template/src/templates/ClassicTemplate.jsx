@@ -1,3 +1,5 @@
+import "../templates.css";
+import "./ClassicTemplate.css";
 import KosLogo from "../KosLogo";
 import Corners from "../Corners";
 

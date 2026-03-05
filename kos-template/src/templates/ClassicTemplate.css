@@ -1,0 +1,130 @@
+/* ── CLASSIC TEMPLATE ── */
+
+.classic-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  font-family: Georgia, serif;
+  background: linear-gradient(160deg, #071528, #0d2040 50%, #071528);
+  background-size: cover;
+  background-position: center;
+}
+
+.classic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #07152eee 0%, #0a1e3acc 40%, #07152eff 100%);
+}
+
+.classic-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  overflow: hidden;
+}
+
+.classic-day-badge {
+  background: #2a6fdb22;
+  border: 1px solid #2a6fdb66;
+  border-radius: 20px;
+  padding: 0px 18px 3px 18px;
+  margin: 4px 0 6px;
+}
+
+.classic-day-badge span {
+  color: #5b9df9;
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.classic-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.classic-dishes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.classic-dish-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff08;
+  border-radius: 10px;
+  padding: 6px 8px;
+  border: 1px solid #2a6fdb22;
+}
+
+.classic-dish-img,
+.classic-dish-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  border: 1.5px solid #2a6fdb55;
+  background-size: cover;
+  background-position: center;
+}
+
+.classic-dish-placeholder {
+  background-color: #0d2040;
+  border-color: #2a6fdb33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.classic-dish-name {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.classic-dish-sub {
+  color: #2a6fdb;
+  font-size: 8px;
+  letter-spacing: 2px;
+  margin-top: 2px;
+}
+
+.classic-price-box {
+  margin-top: 4px;
+  text-align: center;
+  width: 100%;
+  background: #2a6fdb15;
+  border-radius: 12px;
+  padding: 7px 0;
+  border: 1px solid #2a6fdb33;
+}
+
+.classic-price-label {
+  color: #4a7ab5;
+  font-size: 8px;
+  letter-spacing: 3px;
+}
+
+.classic-price-value {
+  color: #5b9df9;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.classic-price-unit {
+  font-size: 14px;
+  color: #4a7ab5;
+}

@@ -1,3 +1,5 @@
+import "../templates.css";
+import "./SplitTemplate.css";
 import KosLogo from "../KosLogo";
 
 /**

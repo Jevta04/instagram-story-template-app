@@ -1,0 +1,59 @@
+/* ── SHARED TEMPLATE ELEMENTS ── */
+/* Importuje se u svaki template koji ga koristi */
+
+/* Horizontalne linije gore/dole */
+.tpl-top-line,
+.tpl-bottom-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2a6fdb, #5b9df9, #2a6fdb, transparent);
+}
+.tpl-top-line    { top: 0; }
+.tpl-bottom-line { bottom: 0; }
+
+/* Dekorativni divider sa ikonom u sredini */
+.tpl-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.tpl-divider-line-l {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #2a6fdb);
+}
+
+.tpl-divider-line-r {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, #2a6fdb, transparent);
+}
+
+.tpl-divider-icon {
+  color: #2a6fdb;
+  font-size: 12px;
+}
+
+/* Adresa/handle u footeru */
+.tpl-footer-address {
+  color: #1e3a6a;
+  font-size: 9px;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+/* Dekorativni uglovi (Classic i Dark) */
+.corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+}
+
+.corner-tl { top: 10px; left: 10px;    border-top: 1.5px solid #2a6fdb; border-left: 1.5px solid #2a6fdb;   }
+.corner-tr { top: 10px; right: 10px;   border-top: 1.5px solid #2a6fdb; border-right: 1.5px solid #2a6fdb;  }
+.corner-bl { bottom: 10px; left: 10px; border-bottom: 1.5px solid #2a6fdb; border-left: 1.5px solid #2a6fdb; }
+.corner-br { bottom: 10px; right: 10px;border-bottom: 1.5px solid #2a6fdb; border-right: 1.5px solid #2a6fdb;}

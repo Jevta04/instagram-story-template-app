@@ -1,3 +1,5 @@
+import "../templates.css";
+import "./DarkTemplate.css";
 import KosLogo from "../KosLogo";
 import Corners from "../Corners";
 
