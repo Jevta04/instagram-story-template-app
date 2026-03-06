@@ -2,7 +2,9 @@ import { useState, useRef } from "react";
 import "./App.css";
 
 import useFavicon from "./hooks/useFavicon.js";
-import loadHtml2Canvas from "./utils/loadHtml2Canvas.js";
+import useHandleImages from "./hooks/useHandleImages.js";
+import useHandleDishName from "./hooks/useHandleDishName.js";
+import handleDownload from "./utils/handleDownload.js";
 
 import KosLogo from "./components/KosLogo.jsx";
 import Panel from "./components/Panel.jsx";
@@ -39,55 +41,8 @@ export default function App() {
   const bgRef      = useRef();
   const previewRef = useRef();
 
-  const readFile = (file, cb) => {
-    const reader = new FileReader();
-    reader.onload = (e) => cb(e.target.result);
-    reader.readAsDataURL(file);
-  };
-
-  const handleDishImage = (i, e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    readFile(file, (result) => {
-      setDishes(prev => {
-        const next = [...prev];
-        next[i] = { ...next[i], image: result };
-        return next;
-      });
-    });
-  };
-
-  const handleBgImage = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    readFile(file, setBgImage);
-  };
-
-  const updateDishName = (i, val) => {
-    setDishes(prev => {
-      const n = [...prev];
-      n[i] = { ...n[i], name: val };
-      return n;
-    });
-  };
-
-  const handleDownload = async () => {
-    if (!previewRef.current) return;
-    setDownloading(true);
-    try {
-      const h2c = await loadHtml2Canvas();
-      const canvas = await h2c(previewRef.current, {
-        scale: 4, useCORS: true, allowTaint: true, backgroundColor: null,
-      });
-      const link = document.createElement("a");
-      link.download = `kos-lounge-${title.replace(/\s+/g, "-").toLowerCase()}-${day.toLowerCase()}.png`;
-      link.href = canvas.toDataURL("image/png");
-      link.click();
-    } catch {
-      alert("Greška. Pokušaj desni klik → Save image.");
-    }
-    setDownloading(false);
-  };
+  const { handleDishImage, handleBgImage } = useHandleImages(setDishes, setBgImage);
+  const { updateDishName }                 = useHandleDishName(setDishes);
 
   const tplProps = { title, day, price, dishes, bgImage };
 
@@ -196,7 +151,11 @@ export default function App() {
               )}
             </Panel>
 
-            <button onClick={handleDownload} disabled={downloading} className="download-btn">
+            <button
+              onClick={() => handleDownload(previewRef, title, day, setDownloading)}
+              disabled={downloading}
+              className="download-btn"
+            >
               {downloading ? "⏳  Preuzimanje..." : "⬇️  Preuzmi Story (PNG)"}
             </button>
             <p className="export-note">Export: 1080 × 1920px · Instagram Story</p>
