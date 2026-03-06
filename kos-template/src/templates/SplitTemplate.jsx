@@ -1,6 +1,7 @@
 import "../templates.css";
 import "./SplitTemplate.css";
-import KosLogo from "../KosLogo";
+import KosLogo from "../components/KosLogo.jsx";
+import Corners from "../components/Corners.jsx";
 
 /**
  * @param {{ title: string, day: string, price: string, dishes: {name: string, image: string}[], bgImage: string }} props
@@ -14,6 +15,7 @@ export default function SplitTemplate({ title, day, price, dishes, bgImage }) {
       </>}
       <div className="tpl-top-line" />
       <div className="tpl-bottom-line" />
+      <Corners />
       <div className="split-content">
         <KosLogo size={70} />
         <div className="split-day-badge">

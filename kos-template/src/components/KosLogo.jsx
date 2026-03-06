@@ -1,4 +1,4 @@
-import kosLogo from "./assets/koslogo.png";
+import kosLogo from "../assets/koslogo.png";
 
 /**
  * @param {{ size?: number }} props

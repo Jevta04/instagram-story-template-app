@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./app.css";
 import kosLogo from "./assets/koslogo.png";
-import KosLogo from "./KosLogo.jsx";
+import KosLogo from "./components/KosLogo.jsx";
 import ClassicTemplate from "./templates/ClassicTemplate.jsx";
 import SplitTemplate from "./templates/SplitTemplate.jsx";
 import DarkTemplate from "./templates/DarkTemplate.jsx";

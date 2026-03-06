@@ -1,7 +1,7 @@
 import "../templates.css";
 import "./DarkTemplate.css";
-import KosLogo from "../KosLogo";
-import Corners from "../Corners";
+import KosLogo from "../components/KosLogo.jsx";
+import Corners from "../components/Corners.jsx";
 
 /**
  * @param {{ title: string, day: string, price: string, dishes: {name: string, image: string}[], bgImage: string }} props
