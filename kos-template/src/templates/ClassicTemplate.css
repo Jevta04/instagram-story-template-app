@@ -1,3 +1,5 @@
+@import "../variables.css";
+
 /* ── CLASSIC TEMPLATE ── */
 
 .classic-wrap {
@@ -5,7 +7,7 @@
   inset: 0;
   overflow: hidden;
   font-family: Georgia, serif;
-  background: linear-gradient(160deg, #071528, #0d2040 50%, #071528);
+  background: linear-gradient(160deg, var(--bg-header-deep), var(--bg-card) 50%, var(--bg-header-deep));
   background-size: cover;
   background-position: center;
 }
@@ -13,7 +15,7 @@
 .classic-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #07152eee 0%, #0a1e3acc 40%, #07152eff 100%);
+  background: linear-gradient(180deg, var(--bg-classic-top) 0%, var(--bg-classic-mid) 40%, var(--bg-classic-bot) 100%);
 }
 
 .classic-content {
@@ -29,15 +31,15 @@
 }
 
 .classic-day-badge {
-  background: #2a6fdb22;
-  border: 1px solid #2a6fdb66;
+  background: var(--color-primary-13);
+  border: 1px solid var(--color-primary-40);
   border-radius: 20px;
   padding: 0px 18px 3px 18px;
   margin: 4px 0 6px;
 }
 
 .classic-day-badge span {
-  color: #5b9df9;
+  color: var(--color-primary-light);
   font-size: 9px;
   letter-spacing: 3px;
 }
@@ -62,10 +64,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #ffffff08;
+  background: var(--bg-dish-row);
   border-radius: 10px;
   padding: 6px 8px;
-  border: 1px solid #2a6fdb22;
+  border: 1px solid var(--color-primary-13);
 }
 
 .classic-dish-img,
@@ -74,14 +76,14 @@
   height: 50px;
   border-radius: 10px;
   flex-shrink: 0;
-  border: 1.5px solid #2a6fdb55;
+  border: 1.5px solid var(--color-primary-33);
   background-size: cover;
   background-position: center;
 }
 
 .classic-dish-placeholder {
-  background-color: #0d2040;
-  border-color: #2a6fdb33;
+  background-color: var(--bg-card);
+  border-color: var(--color-primary-20);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,7 +97,7 @@
 }
 
 .classic-dish-sub {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 8px;
   letter-spacing: 2px;
   margin-top: 2px;
@@ -105,20 +107,20 @@
   margin-top: 4px;
   text-align: center;
   width: 100%;
-  background: #2a6fdb15;
+  background: var(--color-primary-15);
   border-radius: 12px;
   padding: 7px 0;
-  border: 1px solid #2a6fdb33;
+  border: 1px solid var(--color-primary-20);
 }
 
 .classic-price-label {
-  color: #4a7ab5;
+  color: var(--color-primary-muted);
   font-size: 8px;
   letter-spacing: 3px;
 }
 
 .classic-price-value {
-  color: #5b9df9;
+  color: var(--color-primary-light);
   font-size: 24px;
   font-weight: bold;
   line-height: 1.2;
@@ -126,5 +128,5 @@
 
 .classic-price-unit {
   font-size: 14px;
-  color: #4a7ab5;
+  color: var(--color-primary-muted);
 }

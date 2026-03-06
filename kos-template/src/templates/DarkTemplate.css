@@ -1,10 +1,12 @@
+@import "../variables.css";
+
 /* ── DARK TEMPLATE ── */
 
 .dark-wrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background: #050d1a;
+  background: var(--bg-dark-base);
   font-family: Georgia, serif;
 }
 
@@ -18,7 +20,7 @@
 .dark-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, #050d1af0 0%, #050d1acc 50%, #050d1af0 100%);
+  background: linear-gradient(180deg, var(--bg-dark-94) 0%, var(--bg-dark-80) 50%, var(--bg-dark-94) 100%);
 }
 
 .dark-circle-1 {
@@ -28,7 +30,7 @@
   width: 260px;
   height: 260px;
   border-radius: 50%;
-  border: 1px solid #2a6fdb18;
+  border: 1px solid var(--color-primary-10);
 }
 
 .dark-circle-2 {
@@ -38,7 +40,7 @@
   width: 190px;
   height: 190px;
   border-radius: 50%;
-  border: 1px solid #2a6fdb28;
+  border: 1px solid var(--color-primary-20);
 }
 
 .dark-circle-3 {
@@ -48,7 +50,7 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 1px solid #2a6fdb18;
+  border: 1px solid var(--color-primary-10);
 }
 
 .dark-content {
@@ -68,7 +70,7 @@
 }
 
 .dark-day-label {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 8px;
   letter-spacing: 4px;
 }
@@ -91,11 +93,11 @@
 .dark-divider-line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, #2a6fdb, transparent);
+  background: linear-gradient(90deg, var(--color-primary), transparent);
 }
 
 .dark-divider-icon {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 10px;
 }
 
@@ -111,8 +113,8 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  background: #ffffff05;
-  border: 1px solid #2a6fdb22;
+  background: var(--bg-dish-row-dark);
+  border: 1px solid var(--color-primary-13);
   border-radius: 14px;
   overflow: hidden;
 }
@@ -127,7 +129,7 @@
 }
 
 .dark-dish-placeholder {
-  background-color: #0d1e35;
+  background-color: var(--bg-panel);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,14 +143,14 @@
 }
 
 .dark-dish-sub {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 8px;
   letter-spacing: 2px;
   margin-top: 3px;
 }
 
 .dark-footer {
-  border-top: 1px solid #1a3a6a55;
+  border-top: 1px solid var(--color-primary-dark);
   padding-top: 14px;
   margin-top: 14px;
   display: flex;
@@ -157,7 +159,7 @@
 }
 
 .dark-footer-price-label {
-  color: #2a4a7a;
+  color: var(--color-primary-deep);
   font-size: 8px;
   letter-spacing: 2px;
 }
@@ -170,7 +172,7 @@
 }
 
 .dark-footer-price-unit {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 13px;
 }
 
@@ -179,12 +181,12 @@
 }
 
 .dark-footer-street {
-  color: #4a6a9a;
+  color: var(--color-accent-muted);
   font-size: 9px;
 }
 
 .dark-footer-handle {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 9px;
   letter-spacing: 1px;
   margin-top: 2px;

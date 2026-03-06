@@ -1,10 +1,12 @@
+@import "../variables.css";
+
 /* ── SPLIT TEMPLATE ── */
 
 .split-wrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background: #07101f;
+  background: var(--bg-app);
   font-family: Georgia, serif;
 }
 
@@ -18,7 +20,7 @@
 .split-bg-overlay {
   position: absolute;
   inset: 0;
-  background: #07101fdd;
+  background: var(--bg-app-87);
 }
 
 .split-content {
@@ -34,7 +36,7 @@
 }
 
 .split-day-badge {
-  background: #2a6fdb;
+  background: var(--color-primary);
   border-radius: 4px;
   padding: 3px 16px;
   margin-top: 4px;
@@ -71,8 +73,8 @@
 }
 
 .split-dish-card {
-  background: #0d1e3588;
-  border: 1px solid #2a6fdb33;
+  background: var(--bg-panel-semi);
+  border: 1px solid var(--color-primary-20);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -86,7 +88,7 @@
 }
 
 .split-dish-placeholder {
-  background-color: #0d2040;
+  background-color: var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,26 +109,26 @@
 .split-price-box {
   margin-top: 4px;
   width: 100%;
-  background: #2a6fdb18;
+  background: var(--color-primary-10);
   border-radius: 12px;
   padding: 10px 0;
-  border: 1px solid #2a6fdb44;
+  border: 1px solid var(--color-primary-27);
   text-align: center;
 }
 
 .split-price-label {
-  color: #4a7ab5;
+  color: var(--color-primary-muted);
   font-size: 8px;
   letter-spacing: 3px;
 }
 
 .split-price-value {
-  color: #5b9df9;
+  color: var(--color-primary-light);
   font-size: 22px;
   font-weight: bold;
 }
 
 .split-price-unit {
   font-size: 12px;
-  color: #4a7ab5;
+  color: var(--color-primary-muted);
 }

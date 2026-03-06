@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 /* ── GLOBAL RESET ── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -8,13 +10,13 @@
 html, body, #root {
   width: 100%;
   min-height: 100vh;
-  background: #07101f;
+  background: var(--bg-app);
 }
 
 /* ── APP WRAPPER ── */
 .app-wrapper {
   font-family: Georgia, serif;
-  background: #07101f;
+  background: var(--bg-app);
   min-height: 100vh;
   padding: 20px 16px;
   color: white;
@@ -33,7 +35,7 @@ html, body, #root {
   gap: 16px;
   margin-bottom: 28px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #1a3a6a;
+  border-bottom: 1px solid var(--color-primary-dark);
 }
 
 .app-header-logo img {
@@ -48,13 +50,13 @@ html, body, #root {
 
 .app-title {
   font-size: 22px;
-  color: #5b9df9;
+  color: var(--color-primary-light);
   letter-spacing: 2px;
   margin: 0;
 }
 
 .app-subtitle {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 10px;
   letter-spacing: 4px;
   margin: 4px 0 0;
@@ -80,16 +82,16 @@ html, body, #root {
 
 /* ── PANEL ── */
 .panel {
-  background: #0d1e35;
+  background: var(--bg-panel);
   border-radius: 14px;
   padding: 16px;
-  border: 1px solid #1a3a6a;
+  border: 1px solid var(--color-primary-dark);
 }
 
 .panel-label {
   font-size: 9px;
   letter-spacing: 3px;
-  color: #2a6fdb;
+  color: var(--color-primary);
   margin-bottom: 12px;
 }
 
@@ -107,15 +109,15 @@ html, body, #root {
   font-size: 12px;
   font-weight: bold;
   background: transparent;
-  color: #4a6a9a;
-  border: 2px solid #1a3a6a;
+  color: var(--color-accent-muted);
+  border: 2px solid var(--color-primary-dark);
   transition: all 0.15s;
 }
 
 .template-btn.active {
-  border-color: #2a6fdb;
-  background: #2a6fdb22;
-  color: #5b9df9;
+  border-color: var(--color-primary);
+  background: var(--color-primary-13);
+  color: var(--color-primary-light);
 }
 
 /* ── INPUTS ── */
@@ -127,8 +129,8 @@ html, body, #root {
 
 .app-input,
 .app-select {
-  background: #07101f;
-  border: 1px solid #1a3a6a;
+  background: var(--bg-app);
+  border: 1px solid var(--color-primary-dark);
   color: white;
   padding: 8px 12px;
   border-radius: 8px;
@@ -148,7 +150,7 @@ html, body, #root {
 }
 
 .price-unit {
-  color: #5b9df9;
+  color: var(--color-primary-light);
   font-size: 12px;
   flex-shrink: 0;
 }
@@ -167,12 +169,12 @@ html, body, #root {
   border-radius: 8px;
   flex-shrink: 0;
   cursor: pointer;
-  border: 1.5px dashed #2a6fdb;
-  background: #07101f;
+  border: 1.5px dashed var(--color-primary);
+  background: var(--bg-app);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 22px;
   background-size: cover;
   background-position: center;
@@ -180,35 +182,35 @@ html, body, #root {
 
 /* ── BG IMAGE UPLOAD ── */
 .bg-upload-btn {
-  border: 1.5px dashed #2a6fdb;
+  border: 1.5px dashed var(--color-primary);
   border-radius: 10px;
   padding: 14px;
   text-align: center;
   cursor: pointer;
-  background: #07101f;
+  background: var(--bg-app);
   min-height: 58px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #4a6a9a;
+  color: var(--color-accent-muted);
   font-size: 13px;
   background-size: cover;
   background-position: center;
 }
 
 .bg-upload-loaded-label {
-  background: #07101fcc;
+  background: var(--bg-app-80);
   padding: 4px 12px;
   border-radius: 6px;
-  color: #5b9df9;
+  color: var(--color-primary-light);
   font-size: 11px;
 }
 
 .bg-remove-btn {
   margin-top: 6px;
   background: transparent;
-  border: 1px solid #3a2020;
-  color: #a05050;
+  border: 1px solid var(--color-danger-border);
+  color: var(--color-danger);
   border-radius: 6px;
   padding: 4px 10px;
   cursor: pointer;
@@ -218,7 +220,7 @@ html, body, #root {
 
 /* ── DOWNLOAD BUTTON ── */
 .download-btn {
-  background: linear-gradient(135deg, #1a4db5, #2a6fdb);
+  background: linear-gradient(135deg, var(--color-primary-mid), var(--color-primary));
   border: none;
   border-radius: 12px;
   padding: 14px;
@@ -227,16 +229,16 @@ html, body, #root {
   font-weight: bold;
   cursor: pointer;
   letter-spacing: 1px;
-  box-shadow: 0 4px 20px #2a6fdb44;
+  box-shadow: 0 4px 20px var(--color-primary-27);
 }
 
 .download-btn:disabled {
-  background: #1a3a6a;
+  background: var(--color-primary-dark);
   cursor: not-allowed;
 }
 
 .export-note {
-  color: #1a3a6a;
+  color: var(--color-primary-dark);
   font-size: 10px;
   text-align: center;
   margin: -8px 0 0;
@@ -255,7 +257,7 @@ html, body, #root {
 .preview-label {
   font-size: 10px;
   letter-spacing: 3px;
-  color: #2a6fdb;
+  color: var(--color-primary);
 }
 
 .preview-frame {
@@ -263,9 +265,9 @@ html, body, #root {
   height: 480px;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 0 60px #2a6fdb33;
+  box-shadow: 0 0 60px var(--color-primary-20);
   flex-shrink: 0;
-  background: #050d1a;
+  background: var(--bg-dark-base);
   position: relative;
 }
 
@@ -278,5 +280,5 @@ html, body, #root {
 
 .preview-note {
   font-size: 10px;
-  color: #1a3a6a;
+  color: var(--color-primary-dark);
 }

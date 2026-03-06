@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 /* ── SHARED TEMPLATE ELEMENTS ── */
 /* Importuje se u svaki template koji ga koristi */
 
@@ -8,7 +10,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #2a6fdb, #5b9df9, #2a6fdb, transparent);
+  background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-primary-light), var(--color-primary), transparent);
 }
 .tpl-top-line    { top: 0; }
 .tpl-bottom-line { bottom: 0; }
@@ -24,23 +26,23 @@
 .tpl-divider-line-l {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #2a6fdb);
+  background: linear-gradient(90deg, transparent, var(--color-primary));
 }
 
 .tpl-divider-line-r {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, #2a6fdb, transparent);
+  background: linear-gradient(90deg, var(--color-primary), transparent);
 }
 
 .tpl-divider-icon {
-  color: #2a6fdb;
+  color: var(--color-primary);
   font-size: 12px;
 }
 
 /* Adresa/handle u footeru */
 .tpl-footer-address {
-  color: #1e3a6a;
+  color: var(--color-accent-dark);
   font-size: 9px;
   letter-spacing: 1px;
   margin-top: 4px;
@@ -53,7 +55,7 @@
   height: 22px;
 }
 
-.corner-tl { top: 10px; left: 10px;    border-top: 1.5px solid #2a6fdb; border-left: 1.5px solid #2a6fdb;   }
-.corner-tr { top: 10px; right: 10px;   border-top: 1.5px solid #2a6fdb; border-right: 1.5px solid #2a6fdb;  }
-.corner-bl { bottom: 10px; left: 10px; border-bottom: 1.5px solid #2a6fdb; border-left: 1.5px solid #2a6fdb; }
-.corner-br { bottom: 10px; right: 10px;border-bottom: 1.5px solid #2a6fdb; border-right: 1.5px solid #2a6fdb;}
+.corner-tl { top: 10px; left: 10px;    border-top: 1.5px solid var(--color-primary); border-left: 1.5px solid var(--color-primary);   }
+.corner-tr { top: 10px; right: 10px;   border-top: 1.5px solid var(--color-primary); border-right: 1.5px solid var(--color-primary);  }
+.corner-bl { bottom: 10px; left: 10px; border-bottom: 1.5px solid var(--color-primary); border-left: 1.5px solid var(--color-primary); }
+.corner-br { bottom: 10px; right: 10px;border-bottom: 1.5px solid var(--color-primary); border-right: 1.5px solid var(--color-primary);}

@@ -1,0 +1,66 @@
+:root {
+
+  /* ── Brand boje ── */
+  --color-primary:        #2a6fdb;   /* plava — buttons, linije, akcenti */
+  --color-primary-light:  #5b9df9;   /* svetlija plava — naslovi, cene */
+  --color-primary-mid:    #1a4db5;   /* srednja plava — gradient start */
+  --color-primary-dark:   #1a3a6a;   /* tamna plava — borderi, paneli */
+  --color-primary-muted:  #4a7ab5;   /* prigušena plava — labele, jedinice */
+  --color-primary-deep:   #2a4a7a;   /* duboka plava — footer labele */
+  --color-accent-muted:   #4a6a9a;   /* neutralna plava — placeholder tekst */
+  --color-accent-dark:    #1e3a6a;   /* najdublja plava — footer adresa */
+
+  /* ── Pozadine ── */
+  --bg-app:               #07101f;   /* glavna pozadina aplikacije */
+  --bg-panel:             #0d1e35;   /* pozadina panela u UI */
+  --bg-dark-base:         #050d1a;   /* najtamnija — Dark template */
+  --bg-card:              #0d2040;   /* kartica jela u Classic */
+  --bg-header-deep:       #071528;   /* Classic gradient start */
+
+  /* ── Providnost — primary ── */
+  --color-primary-05:     #2a6fdb0d; /* jedva vidljivo */
+  --color-primary-10:     #2a6fdb1a; /* vrlo blago */
+  --color-primary-13:     #2a6fdb22; /* bg badge, dish row */
+  --color-primary-15:     #2a6fdb26; /* price box bg */
+  --color-primary-20:     #2a6fdb33; /* borderi kartica */
+  --color-primary-27:     #2a6fdb44; /* box shadow, split price border */
+  --color-primary-33:     #2a6fdb55; /* dish image border */
+  --color-primary-40:     #2a6fdb66; /* day badge border */
+  --color-primary-shadow: #2a6fdb33; /* preview box-shadow */
+
+  /* ── Providnost — pozadine ── */
+  --bg-app-80:            #07101fcc; /* bg-upload overlay */
+  --bg-app-87:            #07101fdd; /* Split bg overlay */
+  --bg-dark-80:           #050d1acc; /* Dark gradient mid */
+  --bg-dark-94:           #050d1af0; /* Dark gradient edges */
+  --bg-panel-semi:        #0d1e3588; /* Split dish card */
+  --bg-classic-top:       #07152eee; /* Classic overlay top */
+  --bg-classic-mid:       #0a1e3acc; /* Classic overlay mid */
+  --bg-classic-bot:       #07152eff; /* Classic overlay bottom */
+  --bg-dish-row:          #ffffff08; /* Classic dish row */
+  --bg-dish-row-dark:     #ffffff05; /* Dark dish row */
+
+  /* ── Greška / destruktivne akcije ── */
+  --color-danger:         #a05050;   /* dugme ukloni pozadinu */
+  --color-danger-border:  #3a2020;   /* border dugmeta ukloni */
+
+  /* ── Tipografija ── */
+  --font-serif:           Georgia, serif;
+
+  /* ── Razmaci (spacing) ── */
+  --radius-sm:            6px;
+  --radius-md:            8px;
+  --radius-lg:            12px;
+  --radius-xl:            14px;
+  --radius-pill:          20px;
+  --radius-circle:        50%;
+
+  /* ── Borderi ── */
+  --border-panel:         1px solid var(--color-primary-dark);
+  --border-primary-faint: 1px solid var(--color-primary-20);
+  --border-primary-mid:   1px solid var(--color-primary-27);
+
+  /* ── Sjene ── */
+  --shadow-preview:       0 0 60px var(--color-primary-shadow);
+  --shadow-btn:           0 4px 20px var(--color-primary-27);
+}
