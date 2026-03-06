@@ -1,33 +1,15 @@
-import { useState, useRef, useEffect } from "react";
-import "./app.css";
-import kosLogo from "./assets/koslogo.png";
+import { useState, useRef } from "react";
+import "./App.css";
+
+import useFavicon from "./hooks/useFavicon.js";
+import loadHtml2Canvas from "./utils/loadHtml2Canvas.js";
+
 import KosLogo from "./components/KosLogo.jsx";
+import Panel from "./components/Panel.jsx";
+
 import ClassicTemplate from "./templates/ClassicTemplate.jsx";
 import SplitTemplate from "./templates/SplitTemplate.jsx";
 import DarkTemplate from "./templates/DarkTemplate.jsx";
-
-// Postavi favicon i tab title na logo aplikacije
-const useFavicon = () => {
-  useEffect(() => {
-    let link = document.querySelector("link[rel~='icon']");
-    if (!link) {
-      link = document.createElement("link");
-      link.rel = "icon";
-      document.head.appendChild(link);
-    }
-    link.href = kosLogo;
-    document.title = "Koš Lounge · Story Editor";
-  }, []);
-};
-
-const loadHtml2Canvas = () =>
-  new Promise((resolve) => {
-    if (window.html2canvas) return resolve(window.html2canvas);
-    const s = document.createElement("script");
-    s.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
-    s.onload = () => resolve(window.html2canvas);
-    document.head.appendChild(s);
-  });
 
 const TEMPLATES = [
   { id: "classic", name: "Klasik" },
@@ -37,28 +19,19 @@ const TEMPLATES = [
 
 const DAYS = ["Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"];
 
-function Panel({ label, children }) {
-  return (
-    <div className="panel">
-      <div className="panel-label">{label}</div>
-      {children}
-    </div>
-  );
-}
-
 export default function App() {
   useFavicon();
 
   const [template, setTemplate] = useState("classic");
   const [day, setDay]           = useState("Ponedeljak");
-  const [price, setPrice]       = useState("1350");
+  const [price, setPrice]       = useState("0");
   const [title, setTitle]       = useState("Jelo dana");
   const [dishes, setDishes]     = useState([
-    { name: "Potaž",       image: "" },
-    { name: "Lazanje",     image: "" },
-    { name: "Kupus salata",image: "" },
+    { name: "", image: "" },
+    { name: "", image: "" },
+    { name: "", image: "" },
   ]);
-  const [bgImage, setBgImage]       = useState("");
+  const [bgImage, setBgImage]         = useState("");
   const [downloading, setDownloading] = useState(false);
 
   const dishRef0 = useRef(); const dishRef1 = useRef(); const dishRef2 = useRef();
@@ -208,7 +181,7 @@ export default function App() {
               <div
                 onClick={() => bgRef.current.click()}
                 className="bg-upload-btn"
-                style={bgImage ? { backgroundImage: `url(${bgImage})`, borderColor: "#5b9df9" } : {}}
+                style={bgImage ? { backgroundImage: `url(${bgImage})`, borderColor: "var(--color-primary-light)" } : {}}
               >
                 {bgImage
                   ? <span className="bg-upload-loaded-label">✓ Slika učitana · klikni za promenu</span>
