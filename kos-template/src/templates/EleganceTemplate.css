@@ -1,0 +1,211 @@
+@import "../variables.css";
+
+/* ── ELEGANCE TEMPLATE ── */
+
+.elegance-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  font-family: "Georgia", serif;
+  background: var(--bg-dark-base);
+}
+
+/* Pozadinska slika */
+.elegance-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.elegance-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    var(--bg-dark-94) 0%,
+    var(--bg-dark-80) 40%,
+    var(--bg-dark-94) 100%
+  );
+}
+
+/* Zlatna vertikalna linija levo */
+.elegance-side-line {
+  position: absolute;
+  left: 28px;
+  top: 40px;
+  bottom: 40px;
+  width: 1px;
+  background: linear-gradient(180deg,
+    transparent,
+    var(--gold) 15%,
+    var(--gold) 85%,
+    transparent
+  );
+}
+
+/* Mali dijamant na liniji */
+.elegance-side-diamond {
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--gold);
+  background: var(--bg-dark-base);
+}
+
+/* Gornji i donji dekor */
+.elegance-top-ornament,
+.elegance-bottom-ornament {
+  position: absolute;
+  left: 50px;
+  right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.elegance-top-ornament    { top: 40px; }
+.elegance-bottom-ornament { bottom: 40px; }
+
+/* Glavni sadržaj */
+.elegance-content {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 52px 24px 52px 50px;
+}
+
+/* Header: logo + dan */
+.elegance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.elegance-day {
+  font-size: 8px;
+  letter-spacing: 5px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* Naslov sekcija */
+.elegance-title-wrap {
+  margin-bottom: 18px;
+}
+
+.elegance-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  line-height: 1.1;
+  margin: 0 0 6px;
+}
+
+.elegance-title-line {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* Jela */
+.elegance-dishes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.elegance-dish {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.elegance-dish-num {
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 2px;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: right;
+}
+
+.elegance-dish-img,
+.elegance-dish-placeholder {
+  width: 70px;
+  height: 56px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--gold-27);
+}
+
+.elegance-dish-placeholder {
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.elegance-dish-info {
+  flex: 1;
+}
+
+.elegance-dish-name {
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--gold-20);
+}
+
+.elegance-dish-sub {
+  font-size: 8px;
+  color: var(--gold-muted);
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+/* Footer — cena */
+.elegance-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.elegance-price-label {
+  font-size: 7px;
+  letter-spacing: 4px;
+  color: var(--gold-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.elegance-price {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.elegance-price-unit {
+  font-size: 12px;
+  color: var(--gold-muted);
+  margin-left: 4px;
+}
+
+.elegance-address {
+  text-align: right;
+  font-size: 8px;
+  color: var(--gold-40);
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}

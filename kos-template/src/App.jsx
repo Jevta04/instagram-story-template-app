@@ -12,11 +12,13 @@ import Panel from "./components/Panel.jsx";
 import ClassicTemplate from "./templates/ClassicTemplate.jsx";
 import SplitTemplate from "./templates/SplitTemplate.jsx";
 import DarkTemplate from "./templates/DarkTemplate.jsx";
+import EleganceTemplate from "./templates/EleganceTemplate.jsx";
 
 const TEMPLATES = [
   { id: "classic", name: "Klasik" },
   { id: "split",   name: "Split"  },
-  { id: "dark",    name: "Tamni"  },
+  { id: "dark",      name: "Tamni"    },
+  { id: "elegance",  name: "Elegance" },
 ];
 
 const DAYS = ["Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"];
@@ -168,6 +170,7 @@ export default function App() {
               {template === "classic" && <ClassicTemplate {...tplProps} />}
               {template === "split"   && <SplitTemplate   {...tplProps} />}
               {template === "dark"    && <DarkTemplate    {...tplProps} />}
+              {template === "elegance"  && <EleganceTemplate  {...tplProps} />}
             </div>
             <span className="preview-note">preview 270×480 · export 4× = 1080×1920</span>
           </div>

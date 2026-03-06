@@ -1,3 +1,8 @@
+/* ══════════════════════════════════════════
+   KOŠ LOUNGE — Design Tokens
+   Importuje se prvi, pre svih ostalih CSS fajlova
+   ══════════════════════════════════════════ */
+
 :root {
 
   /* ── Brand boje ── */
@@ -39,6 +44,18 @@
   --bg-classic-bot:       #07152eff; /* Classic overlay bottom */
   --bg-dish-row:          #ffffff08; /* Classic dish row */
   --bg-dish-row-dark:     #ffffff05; /* Dark dish row */
+
+
+  /* ── Elegance — zlatni akcenti ── */
+  --gold:             #c9a84c;   /* osnovna zlatna — linije, dijamant, cena */
+  --gold-light:       #e8c96a;   /* svetlija zlatna — hover, highlight */
+  --gold-text:        #f5ead8;   /* topla bela — tekst na tamnoj pozadini */
+  --gold-40:          #c9a84c66; /* zlatna 40% — borderi slika */
+  --gold-27:          #c9a84c44; /* zlatna 27% — dish separator */
+  --gold-20:          #c9a84c33; /* zlatna 20% — suptilni borderi */
+  --gold-10:          #c9a84c1a; /* zlatna 10% — jedva vidljivo */
+  --gold-muted:       #c9a84c88; /* prigušena zlatna — sublabele, adresa */
+
 
   /* ── Greška / destruktivne akcije ── */
   --color-danger:         #a05050;   /* dugme ukloni pozadinu */
