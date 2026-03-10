@@ -168,7 +168,8 @@
 
 .elegance-dish-sub {
   font-size: 8px;
-  color: var(--silver-muted);
+  color: var(--silver);
+  text-transform: uppercase;
   letter-spacing: 3px;
   margin-top: 5px;
 }

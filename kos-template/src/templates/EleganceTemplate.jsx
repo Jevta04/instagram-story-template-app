@@ -3,7 +3,7 @@ import "./EleganceTemplate.css";
 import KosLogo from "../components/KosLogo.jsx";
 
 /**
- * @param {{ title: string, day: string, price: string, dishes: {name: string, image: string}[], bgImage: string }} props
+ * @param {{ title: string, day: string, price: string, dishes: {name: string, image: string, subtitle: string}[], bgImage: string }} props
  */
 export default function EleganceTemplate({ title, day, price, dishes, bgImage }) {
   return (
@@ -44,7 +44,7 @@ export default function EleganceTemplate({ title, day, price, dishes, bgImage })
               }
               <div className="elegance-dish-info">
                 <div className="elegance-dish-name">{d.name}</div>
-                <div className="elegance-dish-sub">KOŠ LOUNGE</div>
+                {d.subtitle && <div className="elegance-dish-sub">{d.subtitle}</div>}
               </div>
             </div>
           ))}

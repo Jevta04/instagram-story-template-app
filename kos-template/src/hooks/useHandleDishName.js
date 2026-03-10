@@ -10,5 +10,13 @@ export default function useHandleDishName(setDishes) {
     });
   };
 
-  return { updateDishName };
+  const updateDishSubtitle = (i, val) => {
+    setDishes(prev => {
+      const n = [...prev];
+      n[i] = { ...n[i], subtitle: val };
+      return n;
+    });
+  };
+
+  return { updateDishName, updateDishSubtitle };
 }

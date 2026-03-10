@@ -1,7 +1,7 @@
 import "../templates.css";
 import "./ClassicTemplate.css";
-import KosLogo from "../components/KosLogo.jsx";
-import Corners from "../components/Corners.jsx";
+import KosLogo from "../components/KosLogo";
+import Corners from "../components/Corners";
 
 /**
  * @param {{ title: string, day: string, price: string, dishes: {name: string, image: string}[], bgImage: string }} props
@@ -36,7 +36,7 @@ export default function ClassicTemplate({ title, day, price, dishes, bgImage }) 
               }
               <div>
                 <div className="classic-dish-name">{d.name}</div>
-                <div className="classic-dish-sub">KOŠ LOUNGE</div>
+                {d.subtitle && <div className="classic-dish-sub">{d.subtitle}</div>}
               </div>
             </div>
           ))}

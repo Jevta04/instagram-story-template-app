@@ -31,9 +31,9 @@ export default function App() {
   const [price, setPrice]       = useState("0");
   const [title, setTitle]       = useState("Jelo dana");
   const [dishes, setDishes]     = useState([
-    { name: "", image: "" },
-    { name: "", image: "" },
-    { name: "", image: "" },
+    { name: "", image: "", subtitle: "KOS LOUNGE" },
+    { name: "", image: "", subtitle: "KOS LOUNGE" },
+    { name: "", image: "", subtitle: "KOS LOUNGE" },
   ]);
   const [bgImage, setBgImage]         = useState("");
   const [downloading, setDownloading] = useState(false);
@@ -44,7 +44,7 @@ export default function App() {
   const previewRef = useRef();
 
   const { handleDishImage, handleBgImage, removeDishImage, removeBgImage } = useHandleImages(setDishes, setBgImage);
-  const { updateDishName }                 = useHandleDishName(setDishes);
+  const { updateDishName, updateDishSubtitle } = useHandleDishName(setDishes);
 
   const tplProps = { title, day, price, dishes, bgImage };
 
@@ -101,6 +101,7 @@ export default function App() {
                   />
                   <span className="price-unit">din.</span>
                 </div>
+
               </div>
             </Panel>
 
@@ -132,12 +133,20 @@ export default function App() {
                     style={{ display: "none" }}
                     onChange={e => handleDishImage(i, e)}
                   />
-                  <input
-                    value={d.name}
-                    onChange={e => updateDishName(i, e.target.value)}
-                    placeholder={`Jelo ${i + 1}`}
-                    className="app-input"
-                  />
+                  <div className="dish-inputs">
+                    <input
+                      value={d.name}
+                      onChange={e => updateDishName(i, e.target.value)}
+                      placeholder={`Jelo ${i + 1}`}
+                      className="app-input"
+                    />
+                    <input
+                      value={d.subtitle}
+                      onChange={e => updateDishSubtitle(i, e.target.value)}
+                      placeholder="Podnaslov (opciono)"
+                      className="app-input app-input--sub"
+                    />
+                  </div>
                 </div>
               ))}
             </Panel>
