@@ -20,7 +20,6 @@ const TEMPLATES = [
   { id: "dark",     name: "Tamni",    maxDishes: 3 },
   { id: "elegance", name: "Elegance", maxDishes: 3 },
 ];
-// maxDishes: maksimalan broj jela koji staje na template
 
 const DAYS = ["Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"];
 
@@ -32,10 +31,10 @@ export default function App() {
   const [price, setPrice]       = useState("0");
   const [title, setTitle]       = useState("Jelo dana");
   const [dishes, setDishes]     = useState([
-    { name: "", image: "", subtitle: "" },
-    { name: "", image: "", subtitle: "" },
-    { name: "", image: "", subtitle: "" },
-    { name: "", image: "", subtitle: "" },
+    { name: "", image: "", subtitle: "KOŠ LOUNGE" },
+    { name: "", image: "", subtitle: "KOŠ LOUNGE" },
+    { name: "", image: "", subtitle: "KOŠ LOUNGE" },
+    { name: "", image: "", subtitle: "KOŠ LOUNGE" },
   ]);
   const [bgImage, setBgImage]         = useState("");
   const [downloading, setDownloading] = useState(false);
@@ -48,7 +47,19 @@ export default function App() {
   const { handleDishImage, handleBgImage, removeDishImage, removeBgImage } = useHandleImages(setDishes, setBgImage);
   const { updateDishName, updateDishSubtitle } = useHandleDishName(setDishes);
 
-  // maksimalan broj jela koji se moze upisati za svaki tempalte; default 3
+  const resetAll = () => {
+    setDay("Ponedeljak");
+    setPrice("0");
+    setTitle("Jelo dana");
+    setDishes([
+      { name: "", image: "", subtitle: "" },
+      { name: "", image: "", subtitle: "" },
+      { name: "", image: "", subtitle: "" },
+      { name: "", image: "", subtitle: "" },
+    ]);
+    setBgImage("");
+  };
+
   const maxDishes = TEMPLATES.find(t => t.id === template)?.maxDishes ?? 3;
   const tplProps = { title, day, price, dishes: dishes.slice(0, maxDishes), bgImage };
 
@@ -180,6 +191,9 @@ export default function App() {
               className="download-btn"
             >
               {downloading ? "⏳  Preuzimanje..." : "⬇️  Preuzmi Story (PNG)"}
+            </button>
+            <button onClick={resetAll} className="reset-btn">
+              ↺ Reset sve
             </button>
             <p className="export-note">Export: 1080 × 1920px · Instagram Story</p>
           </div>
