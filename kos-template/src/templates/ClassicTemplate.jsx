@@ -28,7 +28,7 @@ export default function ClassicTemplate({ title, day, price, dishes, bgImage }) 
           <div className="tpl-divider-line-r" />
         </div>
         <div className="classic-dishes">
-          {dishes.map((d, i) => (
+          {dishes.slice(0, 3).map((d, i) => (
             <div key={i} className="classic-dish-row">
               {d.image
                 ? <div className="classic-dish-img" style={{ backgroundImage: `url(${d.image})` }} />

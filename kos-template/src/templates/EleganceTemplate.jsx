@@ -35,7 +35,7 @@ export default function EleganceTemplate({ title, day, price, dishes, bgImage })
 
         {/* Jela */}
         <div className="elegance-dishes">
-          {dishes.map((d, i) => (
+          {dishes.slice(0, 3).map((d, i) => (
             <div key={i} className="elegance-dish">
               <span className="elegance-dish-num">0{i + 1}</span>
               {d.image

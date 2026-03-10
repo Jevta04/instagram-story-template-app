@@ -32,7 +32,7 @@ export default function DarkTemplate({ title, day, price, dishes, bgImage }) {
           <span className="dark-divider-icon">✦</span>
         </div>
         <div className="dark-dishes">
-          {dishes.map((d, i) => (
+          {dishes.slice(0, 3).map((d, i) => (
             <div key={i} className="dark-dish-row">
               {d.image
                 ? <div className="dark-dish-img" style={{ backgroundImage: `url(${d.image})` }} />

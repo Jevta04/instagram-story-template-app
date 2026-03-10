@@ -15,11 +15,12 @@ import DarkTemplate from "./templates/DarkTemplate.jsx";
 import EleganceTemplate from "./templates/EleganceTemplate.jsx";
 
 const TEMPLATES = [
-  { id: "classic", name: "Klasik" },
-  { id: "split",   name: "Split"  },
-  { id: "dark",      name: "Tamni"    },
-  { id: "elegance",  name: "Elegance" },
+  { id: "classic",  name: "Klasik",   maxDishes: 3 },
+  { id: "split",    name: "Split",    maxDishes: 4 },
+  { id: "dark",     name: "Tamni",    maxDishes: 3 },
+  { id: "elegance", name: "Elegance", maxDishes: 3 },
 ];
+// maxDishes: maksimalan broj jela koji staje na template
 
 const DAYS = ["Ponedeljak", "Utorak", "Sreda", "Četvrtak", "Petak", "Subota", "Nedelja"];
 
@@ -31,22 +32,25 @@ export default function App() {
   const [price, setPrice]       = useState("0");
   const [title, setTitle]       = useState("Jelo dana");
   const [dishes, setDishes]     = useState([
-    { name: "", image: "", subtitle: "KOS LOUNGE" },
-    { name: "", image: "", subtitle: "KOS LOUNGE" },
-    { name: "", image: "", subtitle: "KOS LOUNGE" },
+    { name: "", image: "", subtitle: "" },
+    { name: "", image: "", subtitle: "" },
+    { name: "", image: "", subtitle: "" },
+    { name: "", image: "", subtitle: "" },
   ]);
   const [bgImage, setBgImage]         = useState("");
   const [downloading, setDownloading] = useState(false);
 
-  const dishRef0 = useRef(); const dishRef1 = useRef(); const dishRef2 = useRef();
-  const dishRefs = [dishRef0, dishRef1, dishRef2];
+  const dishRef0 = useRef(); const dishRef1 = useRef(); const dishRef2 = useRef(); const dishRef3 = useRef();
+  const dishRefs = [dishRef0, dishRef1, dishRef2, dishRef3];
   const bgRef      = useRef();
   const previewRef = useRef();
 
   const { handleDishImage, handleBgImage, removeDishImage, removeBgImage } = useHandleImages(setDishes, setBgImage);
   const { updateDishName, updateDishSubtitle } = useHandleDishName(setDishes);
 
-  const tplProps = { title, day, price, dishes, bgImage };
+  // maksimalan broj jela koji se moze upisati za svaki tempalte; default 3
+  const maxDishes = TEMPLATES.find(t => t.id === template)?.maxDishes ?? 3;
+  const tplProps = { title, day, price, dishes: dishes.slice(0, maxDishes), bgImage };
 
   return (
     <div className="app-wrapper">
@@ -106,7 +110,7 @@ export default function App() {
             </Panel>
 
             <Panel label="JELA — klikni kvadrat za sliku">
-              {dishes.map((d, i) => (
+              {dishes.slice(0, maxDishes).map((d, i) => (
                 <div key={i} className="dish-row">
                   <div className="dish-thumb-wrap">
                     <div
