@@ -43,7 +43,7 @@ export default function App() {
   const bgRef      = useRef();
   const previewRef = useRef();
 
-  const { handleDishImage, handleBgImage } = useHandleImages(setDishes, setBgImage);
+  const { handleDishImage, handleBgImage, removeDishImage, removeBgImage } = useHandleImages(setDishes, setBgImage);
   const { updateDishName }                 = useHandleDishName(setDishes);
 
   const tplProps = { title, day, price, dishes, bgImage };
@@ -107,15 +107,23 @@ export default function App() {
             <Panel label="JELA — klikni kvadrat za sliku">
               {dishes.map((d, i) => (
                 <div key={i} className="dish-row">
-                  <div
-                    onClick={() => dishRefs[i].current.click()}
-                    className="dish-thumb"
-                    style={d.image
-                      ? { backgroundImage: `url(${d.image})`, backgroundSize: "cover", backgroundPosition: "center" }
-                      : {}
-                    }
-                  >
-                    {!d.image && "+"}
+                  <div className="dish-thumb-wrap">
+                    <div
+                      onClick={() => dishRefs[i].current.click()}
+                      className="dish-thumb"
+                      style={d.image
+                        ? { backgroundImage: `url(${d.image})`, backgroundSize: "cover", backgroundPosition: "center" }
+                        : {}
+                      }
+                    >
+                      {!d.image && "+"}
+                    </div>
+                    {d.image && (
+                      <button
+                        className="dish-thumb-remove"
+                        onClick={() => removeDishImage(i)}
+                      >✕</button>
+                    )}
                   </div>
                   <input
                     ref={dishRefs[i]}
@@ -147,7 +155,7 @@ export default function App() {
               </div>
               <input ref={bgRef} type="file" accept="image/*" style={{ display: "none" }} onChange={handleBgImage} />
               {bgImage && (
-                <button onClick={() => setBgImage("")} className="bg-remove-btn">
+                <button onClick={removeBgImage} className="bg-remove-btn">
                   ✕ Ukloni pozadinu
                 </button>
               )}

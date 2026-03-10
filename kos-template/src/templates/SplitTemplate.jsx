@@ -41,7 +41,7 @@ export default function SplitTemplate({ title, day, price, dishes, bgImage }) {
           ))}
         </div>
         <div className="split-price-box">
-          <div className="split-price-label">CENA MENIJA</div>
+          <div className="split-price-label">CENA KOMPLETNOG MENIJA</div>
           <div className="split-price-value">
             {price} <span className="split-price-unit">RSD</span>
           </div>
