@@ -1,17 +1,28 @@
 # Koš Lounge — Instagram Story Editor
 
-A web-based tool for creating Instagram Story posts (9:16) for Koš Lounge restaurant. Built with React and Vite, exports high-quality 1080×1920px PNG files ready for Instagram.
+A web-based tool for creating ready-to-post Instagram Stories and social media visuals in under a minute — no design skills required.
+
+Built for [Koš Lounge](https://www.instagram.com/kos.lounge/) as a client project — enables the restaurant staff to quickly produce daily menu posts with consistent branding, without any design tools or technical knowledge.
+
+🔗 **Live app:** [kos-template.vercel.app](https://kos-template.vercel.app/) — works on desktop and mobile
 
 ---
 
-## Features
+## What it does
 
-- **4 templates** — Classic, Split, Dark, Elegance
-- **Per-dish customization** — name, subtitle, and photo for each dish
-- **Background image** support with overlay
-- **High-quality PNG export** — 1080×1920px via html2canvas
-- **No quality loss** — images use `URL.createObjectURL` for full resolution
-- **Reset** — clear all inputs with one click
+Fill in the day, dish names, prices and photos — pick a template — download. That's it.
+
+- **Under a minute** from blank to export-ready post
+- **4 templates** — Classic, Split, Dark, Elegance — each with a distinct visual style
+- **Per-dish control** — name, subtitle, and photo for each dish individually
+- **Add or remove dish photos** with a single click
+- **Background image** support with automatic overlay
+- **Day of the week** selector
+- **Menu title and price** fields
+- **High-quality PNG export** — 1080×1920px, Instagram Story ready
+- **Reset** — clear everything and start fresh with one click
+
+---
 
 ## Tech Stack
 
@@ -67,4 +78,4 @@ The preview renders at 270×480px. On export, html2canvas captures at 4× scale 
 Copyright (c) 2025 Ognjen Jevtić
 
 This project is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
-You may view and share this code, but you may not use, modify, or distribute it without permission.
+You may view and share this code, but you may not use, modify, or distribute it without written permission from the author.
